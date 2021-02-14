@@ -1,0 +1,40 @@
+<mat-card>
+    <div [formGroup]="formNumero">
+        <mat-grid-list id="datosConsulta" cols="2" rowHeight="70px">
+            <mat-grid-tile colspan="1">
+                <mat-form-field appearance="fill">
+                    <input matInput formControlName="numero" placeholder="Numero: ">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+                <button mat-raised-button color="primary" (click)="agregarNumero()">Agregar Numero</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list *ngIf="numeroAcumulado" id="datosConsulta" cols="2" rowHeight="70px">
+            <h1>{{acumulado}}</h1>
+        </mat-grid-list>
+    </div>
+    <div [formGroup]="formOperador">
+        <mat-grid-list id="datosConsulta" cols="2" rowHeight="70px">
+            <mat-grid-tile colspan="1">
+                <mat-form-field appearance="fill">
+                    <mat-select formControlName="operador" placeholder="Operador: ">
+                        <mat-option *ngFor="let op of operadores" [value]="op">
+                            {{op}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+                <button mat-raised-button color="primary" (click)="calcular()">Calcular</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list *ngIf="numeroResultado" id="datosConsulta" cols="2" rowHeight="70px">
+            <h1>{{resultado}}</h1>
+        </mat-grid-list>
+    </div>
+    <mat-grid-list id="datosConsulta" cols="1" rowHeight="70px">
+        <mat-grid-tile colspan="1">
+            <button mat-raised-button color="warn" (click)="limpiar()">Limpiar</button>
+        </mat-grid-tile>
+    </mat-grid-list>
+</mat-card>

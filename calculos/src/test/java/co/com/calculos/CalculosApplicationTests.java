@@ -33,12 +33,12 @@ class CalculosApplicationTests {
 		response= new ResponseDto();
 		
 		response = calculoService.agregarOperando(1);
-		assertThat(response.getBody()).isEqualTo(Constantes.OK);
+		assertThat(response.getStatus()).isEqualTo(200);
 	}
 
 	@Test
 	void testCalcular() throws ScriptException {
-		Integer[] arregloNumeros = { 20, 2, 4, 3, 5 };
+		Integer[] arregloNumeros = { 20, 2, 4, 2, 5 };
 		List<Integer> numeros = Arrays.asList(arregloNumeros);
 		calculoService.llenarOperandos(numeros);
 		response= new ResponseDto();

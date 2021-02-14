@@ -10,4 +10,5 @@ public interface CalculoService {
 	public ResponseDto agregarOperando(Integer operando);
 	public ResponseDto calcular(String operador) throws ScriptException;
 	public void llenarOperandos(List<Integer> ingresados);
+	public ResponseDto limpiar();
 }
