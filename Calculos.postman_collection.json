@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "aa0d364f-a358-4fb6-a80c-2e1eefda2687",
+		"name": "Calculos",
+		"description": "appGate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "agregarOperando",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "1",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8037/calculos/agregarOperando",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8037",
+					"path": [
+						"calculos",
+						"agregarOperando"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calcular",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "POTENCIACION",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8037/calculos/calcular",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8037",
+					"path": [
+						"calculos",
+						"calcular"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
